@@ -26,7 +26,7 @@ export default function Home() {
   // subscribe to events
   useEffect(() => {
     const sub = client
-      .graphql({ query: onMessage, variables: { tenantCode: "suisss" } })
+      .graphql({ query: onMessage, variables: { tenantCode: "MBC" } })
       .subscribe({
         next: ({ data }) => setReceived((prev) => [...prev, data.onMessage]),
         error: (error) => console.warn(error),
